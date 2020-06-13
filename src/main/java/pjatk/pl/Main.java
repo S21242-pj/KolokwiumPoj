@@ -3,6 +3,12 @@ package pjatk.pl;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hai");
+
+        Shop shop1 = new Shop(1234, "SklepShop");
+        Product product1 = new Product(1001, "Jim Beam", 100);
+
+        System.out.println(shop1);
+        System.out.println(product1);
+
     }
 }
