@@ -10,5 +10,9 @@ public class Main {
         System.out.println(shop1);
         System.out.println(product1);
 
+        System.out.println("Add Jim Beam to the avaible product list");
+        shop1.addProductsToList(product1);
+
+
     }
 }

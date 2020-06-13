@@ -6,8 +6,9 @@ import java.util.List;
 public class Shop {
     private int shopId;
     private String shopName;
-   // private List<Shop> availbeProducts = new ArrayList<Shop>();
+    private List<Product> availbeProducts = new ArrayList<Product>();
  //   private List<Shop> soldProducts = new ArrayList<Shop>();
+
 
     public Shop(int shopId, String shopName) {
         this.shopId = shopId;
@@ -27,11 +28,19 @@ public class Shop {
                 throw new IllegalArgumentException("Numbers in shop name!!");
             }
         }
-
-
-
-
     }
+
+    public void addProductsToList(Product shop){
+        availbeProducts.add(shop);
+    }
+
+
+
+
+
+
+
+
 
 
     @Override
