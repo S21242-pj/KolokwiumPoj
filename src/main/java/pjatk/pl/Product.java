@@ -12,13 +12,28 @@ public class Product {
         this.productPrice = productPrice;
     }
 
+    public int getProductId() {
+        return productId;
+    }
 
+    public String getProductName() {
+        return productName;
+    }
+
+    public int getProductPrice() {
+        return productPrice;
+    }
+
+    public boolean hasProductIdOf(int productId){
+        return getProductId() == productId;
+    }
     private void validatePrice(int productPrice){
         if(productPrice < 6){
             throw new IllegalArgumentException("Product cant be sold for 0$ or less!!!");
         }
 
     }
+
 
 
     @Override

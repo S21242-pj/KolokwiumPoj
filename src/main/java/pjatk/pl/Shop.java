@@ -6,8 +6,8 @@ import java.util.List;
 public class Shop {
     private int shopId;
     private String shopName;
-    private List<Product> availbeProducts = new ArrayList<Product>();
- //   private List<Shop> soldProducts = new ArrayList<Shop>();
+    private List<Product> availbeProducts = new ArrayList<>();
+ //   private List<Product> soldProducts = new ArrayList<>();
 
 
     public Shop(int shopId, String shopName) {
@@ -15,6 +15,14 @@ public class Shop {
         validateShopName(shopName);
         this.shopName = shopName;
     }
+
+    public List<Product> getAvailbeProducts() {
+        return availbeProducts;
+    }
+
+    /**
+     * Validate shopName, it must contains more than 6 characters excluding numbers
+     */
 
     private void validateShopName(String shopName){
         if(shopName.length()<6){
@@ -29,6 +37,10 @@ public class Shop {
             }
         }
     }
+
+    /**
+     * To find product in our shop, we have to make method to add products.
+     */
 
     public void addProductsToList(Product shop){
         availbeProducts.add(shop);
@@ -48,7 +60,7 @@ public class Shop {
         return "Shop{" +
                 "shopId=" + shopId +
                 ", shopName='" + shopName + '\'' +
-       //         ", availbeProducts=" + availbeProducts +
+                ", availbeProducts=" + availbeProducts +
          //       ", soldProducts=" + soldProducts +
                 '}';
     }
